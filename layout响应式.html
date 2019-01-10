@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+				background-color: paleturquoise;
+			}
+			
+			.clear:after {
+				content: "";
+				height: 0;
+				clear: both;
+				display: block;
+				visibility: hidden;
+			}
+			
+			.container {
+				width: 1024px;
+				margin: 20px auto;
+				color: deeppink;
+				padding: 0px 5px;
+				background-color: white;
+			}
+			
+			aside {
+				width: 300px;
+				height: 172px;
+				float: left;
+				margin-right: 12px;
+				background: url(img/logo.jpg);
+				font-size: 60px;
+				font-weight: bold;
+				line-height: 172px;
+				text-align: center;
+			}
+			
+			nav {
+				width: 702px;
+				height: 60px;
+				margin: 10px auto;
+				float: right;
+				border: 1px solid deeppink;
+			}
+			
+			nav .item {
+				width: 233px;
+				height: 60px;
+				float: left;
+				text-align: center;
+				line-height: 20px;
+			}
+			
+			nav .item p {
+				margin: 0px;
+				padding: 0px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			
+			main {
+				width: 702px;
+				height: inherit;
+				float: right;
+			}
+			
+			main article {
+				width: 702px;
+				height: 300px;
+				margin-bottom: 10px;
+			}
+			
+			main article p {
+				margin: 0px;
+				padding: 0px;
+				font-size: 30px;
+				text-align: center;
+				line-height: 60px;
+			}
+			
+			main article section {
+				width: 680px;
+				margin-left: 11px;
+				text-indent: 2em;
+			}
+			
+			main footer {
+				width: 702px;
+				height: 230px;
+				border: 1px solid deeppink;
+			}
+			
+			main footer .title {
+				width: 690px;
+				height: 30px;
+				text-align: center;
+				font-size: 22px;
+				margin-left: 6px;
+				margin-bottom: 10px;
+			}
+			
+			main footer .title span {
+				display: block;
+				width: 250px;
+				height: 2px;
+				float: left;
+				margin-top: 14px;
+				background-color: deeppink;
+			}
+			
+			main footer .title span:last-child {
+				float: right;
+			}
+			
+			main footer ul {
+				width: 690px;
+				height: 190px;
+				margin: 0px;
+				padding: 0px;
+				margin-left: 6px;
+			}
+			
+			main footer ul li {
+				float: left;
+				list-style: none;
+				margin-right: 6px;
+			}
+			
+			main footer ul li:last-child {
+				margin-right: 0px;
+			}
+			
+			main footer ul li img {
+				width: 110px;
+				height: 180px;
+			}
+			
+			@media only screen and (max-width:768px) {
+				.container {
+					width: 100%;
+					height: 900px;
+					position: relative;
+				}
+				aside {
+					width: 30%;
+					height: auto;
+					font-size: 30px;
+					margin-right: 1%;
+					line-height: 172px background-size:100%;
+					background-repeat: no-repeat;
+				}
+				nav {
+					width: 30%;
+					height: 180px;
+					position: absolute;
+					left: 5px;
+					top: 200px;
+				}
+				nav .item {
+					width: 98%;
+					height: 60px;
+					margin-left: 1%;
+					border-bottom: 1px solid #CCCCCC;
+				}
+				nav .item:last-child {
+					border-bottom: 0px;
+				}
+				main {
+					width: 69%;
+					height: 900px;
+					float: right;
+				}
+				main article {
+					width: 100%;
+					height: 380px;
+				}
+				main article section {
+					width: 98%;
+					margin-left: 1%;
+				}
+				main footer {
+					width: 100%;
+					height: 500px;
+				}
+				main footer .title {
+					width: 98%;
+					margin-left: 1%;
+				}
+				main footer .title span {
+					width: 36%;
+				}
+				main footer ul {
+					width: 98%;
+				}
+				main footer ul li {
+					width: 32%;
+					height: auto;
+					margin-right: 2%;
+				}
+				main footer ul li img {
+					width: 100%;
+					height: 220px;
+				}
+				main footer ul li:nth-child(3) {
+					margin-right: 0px;
+				}
+				@media only screen and (max-width: 500px) {
+					.container {
+						width: 100%;
+						height: 1050px;
+						position: relative;
+					}
+					aside {
+						width: 100%;
+						background-image: none;
+						position: absolute;
+						top: 20px;
+						left: 0px;
+					}
+					nav {
+						width: 100%;
+						height: 60px;
+						position: absolute;
+						top: 10px;
+						left: 0px;
+						border: 1px solid deeppink;
+					}
+					nav .item {
+						width: 32%;
+						border: 0px;
+					}
+					main {
+						width: 100%;
+						height: 1050px;
+						position: absolute;
+						top: 120px;
+						left: 0px;
+					}
+					main article p {
+						font-size: 24px;
+					}
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container clear">
+			<aside>
+				LOGO
+			</aside>
+			<nav class="clear">
+				<div class="item">
+					<p>Home</p>首页</div>
+				<div class="item">
+					<p>Shop</p>商铺</div>
+				<div class="item">
+					<p>User</p>个人中心</div>
+			</nav>
+			<main>
+				<article>
+					<p class="title">"Give me problem，give me work."</p>
+					<section>
+						周末走在繁华的闹市街 ，街道两边有很多的店铺，水果店、超市、花店 。花店一家挨一家，途径那里弥漫的花香落慢衣裳，人也顿觉轻松舒畅。我要说的这家花店是在街道的拐角处，应该是刚开的吧！
+						<br /> 之前没有看到过。我并没有走进花店，而是站在门口向里面张望，看到里面琳琅满目的鲜花。店主在门口修剪花篮。我凝神望去，一位美女，修长的身材披着拉直的头发，在那里专心的修剪鲜花。从此我就注意到了她 。
+						<br /> 在之后的一段时间里，每次经过她的花店，总是看见她一个人在里面静静地坐着，听着音乐，或是上网，或是摆弄鲜花，或是看书。突然觉得，这不就是我一直梦想的花店吗？一间拥有很大落地窗的屋子，阳光倾斜射进照着我，而我懒懒的依靠着藤椅，闻着花香，看着爱看的书。闲暇时，我会悉心的照料我的花店。把各种最美好、最真实的祝福送给来往的人们……
+						<br /> 每天嗅着花香，沉醉在某种境界过着安然的生活，那仿佛是一种难以想象的奢侈。
+					</section>
+				</article>
+				<footer>
+					<div class="title clear">
+						<span></span> 恬静自然景色
+						<span></span>
+					</div>
+					<ul class="clear">
+						<li><img src="img/img1.jpg" /></li>
+						<li><img src="img/img2.jpg" /></li>
+						<li><img src="img/img3.jpg" /></li>
+						<li><img src="img/img4.jpg" /></li>
+						<li><img src="img/img5.jpg" /></li>
+						<li><img src="img/img6.jpg" /></li>
+					</ul>
+				</footer>
+			</main>
+		</div>
+
+	</body>
+
+</html>

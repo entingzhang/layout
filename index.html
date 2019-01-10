@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+				background-color: paleturquoise;
+				color: deeppink;
+			}
+			
+			.left {
+				float: left;
+			}
+			
+			.right {
+				float: right;
+			}
+			
+			.clear:after {
+				content: "";
+				height: 0px;
+				clear: both;
+				display: block;
+				visibility: hidden;
+			}
+			
+			.container {
+				width: 1024px;
+				margin: 20px auto;
+				padding: 10px 10px;
+				background-color: #FFFFFF;
+			}
+			
+			aside {
+				width: 300px;
+				height: 172px;
+				background-image: url(img/logo.jpg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				position: relative;
+			}
+			
+			aside img{
+				position: absolute;
+				width: 100px;
+				height: 40px;
+				top: 50%;
+				left: 50%;
+				margin-left: -50px;
+				margin-top: -30px;
+			}
+			nav {
+				width: 700px;
+				height: 70px;
+				border: 1px solid deeppink;
+				float: right;
+			}
+			
+			nav .item {
+				width: 230px;
+				height: 60px;
+				background-color: #ffffff;
+				float: right;
+				text-align: center;
+				line-height: 12px;
+			}
+			
+			nav .item p {
+				font-size: 12px;
+			}
+			
+			main {
+				width: 700px;
+				float: right;
+			}
+			
+			article {
+				width: 724px;
+				margin: 10px auto;
+				font-size: 30px;
+				text-align: center;
+			}
+			section{
+				width: 700px;
+				text-indent: 2em;
+				margin: 10px auto;
+			}
+			footer{
+				width: 700px;
+				height: 220px;
+				padding: 0px 10px;
+				border: 1px solid deeppink;
+				float: right;
+			}
+			footer .title{
+				width: 700px;
+				text-align: center;
+				line-height: 20px;
+				margin-bottom: 10px;
+			}
+			footer .title span{
+				background-color: deeppink;
+				display: block;
+				width: 300px;
+				height: 2px;
+				float: left;
+				margin-top: 9px;
+			}
+			.title span:last-child{
+				float: right;
+			}
+			footer .item{
+				float: left;
+				width: 110px;
+				margin-right: 8px;
+			}
+			footer .item:last-child{
+				margin-right: 0px;
+			}
+			footer .item img{
+				width: 110px;
+				height: 180px;
+			}
+			@media only screen and (max-width:768px ) {
+				.container{
+					width: 100%;
+					position: relative;
+				}
+				aside{
+					width: 30%;
+					position: relative;
+				}
+				aside img{
+					width: 33.3%;
+					height: 20%;
+					margin-left: -15%;
+					margin-top: -30%;
+				}
+				nav{
+					width: 28%;
+					height: 183px;
+					position: absolute;
+					top: 180px;
+				}
+				nav .item{
+					width: 100%;
+					height: 60px;
+					border-bottom: 1px solid #cccccc;
+				}
+				nav .item:last-child{
+					border: 0px;
+				}
+				main{
+					width: 65%;
+				}
+				footer .title{
+					width: 65%;
+					height: 200px;
+				}
+				footer .title span{
+					width: 45%;
+				}
+				footer .item{
+					width: 32%;
+					margin-right:2% ;
+				}
+				footer .item:nth-child(3){
+					margin-right: 0px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container clear">
+			<aside class="left">
+				<!--<img src="img/logo.jpg"/>-->
+				<img src="img/logo2.jpg"/>
+			</aside>
+			<nav>
+				<div class="item">
+					<p>Home</p>
+					<span>首页</span>
+				</div>
+				<div class="item">
+					<p>Mall</p>
+					<span>商城</span>
+				</div>
+				<div class="item">
+					<p>User</p>
+					<span>个人中心</span>
+				</div>
+			</nav>
+			<main>
+				<article>
+					"Give me problem，give me work."
+				</article>
+				<section>
+					周末走在繁华的闹市街 ，街道两边有很多的店铺，水果店、超市、花店 。花店一家挨一家，途径那里弥漫的花香落慢衣裳，人也顿觉轻松舒畅。我要说的这家花店是在街道的拐角处，应该是刚开的吧！
+					<br />
+					之前没有看到过。我并没有走进花店，而是站在门口向里面张望，看到里面琳琅满目的鲜花。店主在门口修剪花篮。我凝神望去，一位美女，修长的身材披着拉直的头发，在那里专心的修剪鲜花。从此我就注意到了她 。
+					<br />
+					在之后的一段时间里，每次经过她的花店，总是看见她一个人在里面静静地坐着，听着音乐，或是上网，或是摆弄鲜花，或是看书。突然觉得，这不就是我一直梦想的花店吗？一间拥有很大落地窗的屋子，阳光倾斜射进照着我，而我懒懒的依靠着藤椅，闻着花香，看着爱看的书。闲暇时，我会悉心的照料我的花店。把各种最美好、最真实的祝福送给来往的人们…… 
+					<br />
+					每天嗅着花香，沉醉在某种境界过着安然的生活，那仿佛是一种难以想象的奢侈。
+				</section>
+				<footer>
+					<div class="title">
+						<span></span>
+						鲜花无语
+						<span></span>
+					</div>
+					<!--<div class="item">
+						<img src="img/img1.jpg"/>
+					</div>
+					<div class="item">
+						<img src="img/img2.jpg"/>
+					</div>
+					<div class="item">
+						<img src="img/img3.jpg"/>
+					</div>
+					<div class="item">
+						<img src="img/img4.jpg"/>
+					</div>
+					<div class="item">
+						<img src="img/img5.jpg"/>
+					</div>
+					<div class="item">
+						<img src="img/img6.jpg"/>
+					</div>-->
+				</footer>
+			</main>
+
+		</div>
+	</body>
+
+</html>
