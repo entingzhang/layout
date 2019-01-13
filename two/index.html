@@ -5,103 +5,59 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<style type="text/css">
-			.login-box {
-				width: 300px;
-				height: 250px;
-				background-color: #FFFFFF;
-				border: 3px solid deeppink;
-				margin: 50px auto;
-				color: #FFFFFF;
-				font-size: 40px;
-			}
-			
-			.login {
-				width: 90%;
-				height: 60px;
-				background-color: deeppink;
-				border-radius: 5px;
-				margin: 15% 5%;
-				text-align: center;
-				line-height: 60px;
-			}
-			
-			.leave {
-				width: 90%;
-				height: 60px;
-				background-color: deeppink;
-				border-radius: 5px;
-				margin: 15% 5%;
-				text-align: center;
-				line-height: 60px;
-			}
-			
-			.user-box {
-				width: 600px;
-				height: 250px;
-				margin: 50px auto;
-				border: 3px solid deeppink;
-			}
-			
-			.user-box ul {
-				width: 560px;
-				list-style: none;
-				font-size: 18px;
-			}
-			.user-box ul li{
-				width: 100%;
-				border-bottom: 1px solid deeppink;
-			}
-			.user-box ul li span {
-				margin-right: 20px;
-			}
+
 		</style>
 	</head>
 
 	<body>
-		<div class="container">
-
-			<div class="login-box">
-				<div class="login">登陆</div>
-				<div class="leave">离开</div>
-			</div>
-			<div class="user-box">
-				<ul>
-				<li><span>登陆人：某某某</span><span>|登陆时间：00:00:00</span><spna>登陆时长：00:00:00</spna></li>
-			</ul>
-			</div>
-		</div>
-		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<h2>总访问时间：<span id="duration">00:00:00</span></h2>
+		<h3>访问记录</h3>
+		<ul id="histoty">
+		</ul>
 		<script type="text/javascript">
-			let login=document.querySelector(".login");
-			let leave=document.querySelector(".leave");
-			let span=document.querySelectorAll(".user-box ul li span");
-			
-			 login.onclick=function(){
-			 	addCookie("user_id",123,7200,'./');
-//				console.log("123");
-				let time=new Date();
-				let h=time.getHours();
-				let m=time.getMinutes();
-				let s=time.getSeconds();
-				shownum();
-				span[1].innerText="登陆时间："+h+":"+m+":"+s;
-			 }
-			 
-			 
-			let i=0;
-			let j=0;
-			let k=0;
-			function shownum(){
-				i=i+1;
-				j=i>59?j+1:j;
-				k=j>59?k+1:k;
-				console.log(i);
-//				span[2].innerHTML="登陆时长："+k+":"+j+":"+i;
-				span[2].innerHTML=i;
-				setTimeout('shownum()',1000);
+			var duration = localStorage.getItem('duration') ? localStorage.getItem('duration') : 0;
+			var t = setInterval(function() {
+				duration++;
+				var h = Math.floor(duration / 3600);
+				var m = Math.floor((duration % 3600) / 60);
+				var s = Math.floor(duration % 60);
+				h = h < 10 ? '0' + h : h;
+				m = m < 10 ? '0' + m : m;
+				s = s < 10 ? '0' + s : s;
+				document.querySelector("#duration").innerText = h + ":" + m + ":" + s;
+				localStorage.setItem('duration', duration);
+			}, 1000)
+
+			function formatTime(timestamp) {
+				var time = new Date();
+				time.setTime(timestamp);
+				var y = time.getFullYear();
+				var m = time.getMonth() + 1;
+				var d = time.getDate();
+				var h = time.getHours();
+				var min = time.getMinutes();
+				var s = time.getSeconds();
+				m = m < 10 ? '0' + m : m;
+				d = d < 10 ? '0' + d : d;
+				h = h < 10 ? '0' + h : h;
+				min = min < 10 ? '0' + min : min;
+				s = s < 10 ? '0' + s : s;
+				return y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s;
+				console.log(y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s);
 			}
-			
+
+			var historyStr = localStorage.getItem("history") ? localStorage.getItem("history") : "[]";
+			var historyArr = JSON.parse(historyStr);
+
+			historyArr.unshift(new Date().getTime());
+			historyStr = JSON.stringify(historyArr);
+			localStorage.setItem("history", historyStr);
+			var ul = document.querySelector("#histoty");
+			for(var i = 0; i < historyArr.length; i++) {
+				var newLi = document.createElement("li");
+				newLi.innerText = formatTime(historyArr[i]);
+				ul.appendChild(newLi);
+			}
 		</script>
 	</body>
 
