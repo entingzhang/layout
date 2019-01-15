@@ -8,3 +8,28 @@
 body{
 	line-height: 1;
 }
+ul,ol{
+	list-style: none;
+}
+body{
+	background:#E4E4E4 url(../img/bg.png);
+	color:#292929;
+	color: rgba(0,0,0,0.82);
+	font: normal 100% Cambria,Georgia,serif;
+	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	-webkit-text-size-adjust: none;
+}
+a{
+	color: #890101;
+	text-decoration: none;
+}
+a:hover{
+	color: #df3030;
+}
+#page{
+	background: url(../img/rag.png) repeat-x;
+	padding: 2em 0;
+}
+
