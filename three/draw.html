@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.draw {
+				width: 402px;
+				height: 500px;
+				border: 1px solid deeppink;
+				margin: 50px auto 0px;
+			}
+			
+			#canvas {
+				width: 400px;
+				height: 400px;
+				display: block;
+				border-bottom: 1px solid deeppink;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="draw">
+			<canvas id="canvas" width="800" height="800"></canvas>
+			<input type="color" name="color" id="color" value="" />
+			铅笔粗细<input type="range" name="range" id="range" value="1" min="1" max="50" />
+			<label>
+				<input type="radio" name="drawType" id="pen" value="" />画笔
+			</label>
+			<label>
+				<input type="radio" name="drawType" id="deleted" value="" />橡皮擦
+			</label>
+		</div>
+		<script type="text/javascript">
+			var canvas = document.querySelector("#canvas");
+			var context = canvas.getContext("2d");
+			var pen = document.querySelector("#pen");
+			var deleted = document.querySelector("#deleted");
+			var draw = false;
+			pen.onfocus = function() {
+				console.log(123);
+				canvas.onmousedown = function() {
+					draw = true;
+					context.beginPath();
+				}
+				canvas.onmouseup = function() {
+					draw = false;
+					context.closePath();
+				}
+				canvas.onmousemove = function(e) {
+					if(draw) {
+						var x = e.offsetX * 2;
+						var y = e.offsetY * 2;
+						context.lineTo(x, y);
+						context.stroke();
+					}
+				}
+				document.querySelector("#color").onchange = function() {
+					context.strokeStyle = this.value;
+				}
+				document.querySelector("#range").onchange = function() {
+					context.lineWidth = this.value;
+				}
+			}
+			deleted.onfocus = function() {
+				console.log(456);
+				draw = false;
+				canvas.onmousedown = function() {
+					draw = false;
+					context.beginPath();
+				}
+				canvas.onmouseup = function() {
+					draw = false;
+					context.closePath();
+				}
+				canvas.onmousemove = function(e) {
+					if(draw==false) {
+						var x = e.offsetX * 2;
+						var y = e.offsetY * 2;
+						context.clearRect(x, y, 30,30);
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>
