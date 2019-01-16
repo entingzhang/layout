@@ -23,44 +23,10 @@
 			var x=20;
 			var y=20;
 			var r=20;
+			var step=0;
 			context.fillStyle="deeppink";
-			var t1=setInterval(function(){
-				if (x<780&&y<780) {
-					context.clearRect(0,0,800,800);
-					x+=20;
-					context.beginPath();
-					context.arc(x,y,r,0,Math.PI*2,true);
-					context.fill();
-				}
-				if (x>=780&&y<=780) {
-					context.clearRect(0,0,800,800);
-					x=780;
-					y+=20;
-					context.beginPath();
-					context.arc(x,y,r,0,Math.PI*2,true);
-					context.fill()
-				}
-				if (x<=780&&y>=780) {
-					context.clearRect(0,0,800,800);
-					y=780;
-					x-=20;
-					context.beginPath();
-					context.arc(x,y,r,0,Math.PI*2,true);
-					context.fill()
-				}
-				if (x==20&&y<=780) {
-					context.clearRect(0,0,800,800);
-					x=20;
-					y=y-20;
-					context.beginPath();
-					context.arc(x,y,r,0,Math.PI*2,true);
-					context.fill();
-					console.log(x);
-					console.log(y);
-				}
-				if (x==20&&y==20) {
-					clearInterval(t1);
-				}
+			var t=setInterval(function(){
+				
 			},100)
 			
 		</script>
