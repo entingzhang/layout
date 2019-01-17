@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				width: 400px;
+				height: 400px;
+				border: 3px solid deeppink;
+				margin: 50px auto 0;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800"></canvas>
+		<script type="text/javascript">
+			var canvas=document.querySelector("#canvas");
+			var context=canvas.getContext("2d");
+			context.lineCap="round";
+			context.translate(400,400);
+			
+			function clock(){
+				var now=new Date();
+				var Y=now.getFullYear();
+				var M=now.getMonth()+1;
+				var D=now.getDate();
+				var h=now.getHours();
+				var m=now.getMinutes();
+				var s=now.getSeconds();
+				//清空画布
+				context.clearRect(-400,-400,800,800);
+				//表盘
+				context.beginPath();
+				context.lineWidth=20;
+				context.strokeStyle="deeppink";
+				context.arc(0,0,380,0,Math.PI*2);
+				context.stroke();
+				//画出刻度
+				for(var i=0;i<60;i++){
+					var x=Math.cos(Math.PI/180*6*i)*360;
+					var y=Math.sin(Math.PI/180*6*i)*360;
+					var x1=Math.cos(Math.PI/180*6*i)*340;
+					var y1=Math.sin(Math.PI/180*6*i)*340;
+					context.beginPath();
+					context.fillStyle="deeppink";
+					if (i%5==0) {
+						context.save();
+							context.textAlign="center";
+							context.textBaseline="middle";
+							var t=Math.floor(i/5+1);
+							switch (t){
+								case 1:context.fillText(t+2,x1,y1);break;
+								case 2:context.fillText(t+2,x1,y1);break;
+								case 3:context.fillText(t+2,x1,y1);break;
+								case 4:context.fillText(t+2,x1,y1);break;
+								case 5:context.fillText(t+2,x1,y1);break;
+								case 6:context.fillText(t+2,x1,y1);break;
+								case 7:context.fillText(t+2,x1,y1);break;
+								case 8:context.fillText(t+2,x1,y1);break;
+								case 9:context.fillText(t+2,x1,y1);break;
+								case 10:context.fillText(t+2,x1,y1);break;
+								case 11:context.fillText(t-10,x1,y1);break;
+								case 12:context.fillText(t-10,x1,y1);break;
+							}
+							context.fill();
+						context.restore();
+					} else{
+						context.arc(x,y,4,0,Math.PI*2);
+						context.fill();
+					}
+				}
+				//画出时针
+				context.save();
+					context.beginPath();
+					context.rotate(Math.PI/180*(30*h+30/60*m));
+					context.lineTo(0,40);
+					context.lineTo(0,-220);
+					context.stroke();
+				context.restore();
+				//画出分针
+				context.save();
+					context.beginPath();
+					context.lineWidth=15;
+					context.rotate(Math.PI/180*(6*m+6/60*s));
+					context.lineTo(0,40);
+					context.lineTo(0,-260);
+					context.stroke();
+				context.restore();
+				//画出秒针
+				context.save();
+					context.beginPath();
+					context.lineWidth=5;
+					context.strokeStyle="red";
+					context.rotate(Math.PI/180*6*s);
+					context.lineTo(0,60);
+					context.lineTo(0,-280);
+					context.stroke();
+				context.restore();
+				
+				
+				//画出圆心
+				context.beginPath();
+				context.arc(0,0,30,0,Math.PI*2);
+				context.fill();
+				context.font="bolder 40px '幼圆'";
+				context.fillText(Y+'年'+M+'月'+D+'日',-130,290);
+			}
+			clock();
+			setInterval(clock,0);
+		</script>
+	</body>
+</html>
