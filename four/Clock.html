@@ -7,7 +7,7 @@
 			#canvas{
 				width: 400px;
 				height: 400px;
-				border: 3px solid deeppink;
+				/*border: 3px solid deeppink;*/
 				margin: 50px auto 0;
 				display: block;
 			}
@@ -76,7 +76,7 @@
 					context.beginPath();
 					context.rotate(Math.PI/180*(30*h+30/60*m));
 					context.lineTo(0,40);
-					context.lineTo(0,-220);
+					context.lineTo(0,-200);
 					context.stroke();
 				context.restore();
 				//画出分针
@@ -85,7 +85,7 @@
 					context.lineWidth=15;
 					context.rotate(Math.PI/180*(6*m+6/60*s));
 					context.lineTo(0,40);
-					context.lineTo(0,-260);
+					context.lineTo(0,-250);
 					context.stroke();
 				context.restore();
 				//画出秒针
