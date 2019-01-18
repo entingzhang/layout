@@ -49,21 +49,7 @@
 						context.save();
 							context.textAlign="center";
 							context.textBaseline="middle";
-							var t=Math.floor(i/5+1);
-							switch (t){
-								case 1:context.fillText(t+2,x1,y1);break;
-								case 2:context.fillText(t+2,x1,y1);break;
-								case 3:context.fillText(t+2,x1,y1);break;
-								case 4:context.fillText(t+2,x1,y1);break;
-								case 5:context.fillText(t+2,x1,y1);break;
-								case 6:context.fillText(t+2,x1,y1);break;
-								case 7:context.fillText(t+2,x1,y1);break;
-								case 8:context.fillText(t+2,x1,y1);break;
-								case 9:context.fillText(t+2,x1,y1);break;
-								case 10:context.fillText(t+2,x1,y1);break;
-								case 11:context.fillText(t-10,x1,y1);break;
-								case 12:context.fillText(t-10,x1,y1);break;
-							}
+							context.fillText((i/5+2)%12+1,x1,y1)
 							context.fill();
 						context.restore();
 					} else{
@@ -105,7 +91,9 @@
 				context.arc(0,0,30,0,Math.PI*2);
 				context.fill();
 				context.font="bolder 40px '幼圆'";
-				context.fillText(Y+'年'+M+'月'+D+'日',-130,290);
+				context.textAlign="center";
+				context.textBaseline="middle";
+				context.fillText(Y+'-'+M+'-'+D,-0,290);
 			}
 			clock();
 			setInterval(clock,0);
