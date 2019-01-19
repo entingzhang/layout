@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.nav{
+				margin: 50px auto 0px;
+				padding: 0px;
+				width: 900px;
+				height: 135px;
+				list-style: none;
+				position: relative;
+				z-index: 99999;
+			}
+			.clear:after{
+				content: "";
+				height: 0;
+				clear: both;
+			}
+			.nav li{
+				width: 150px;
+				height: 135px;
+				float: left;
+			}
+			.nav li:first-child{
+				background: url(img/burger-large.png) center;
+			}
+			.nav li:nth-child(2){
+				background: url(img/comment-large.png) center;
+			}
+			.nav li:nth-child(3){
+				background: url(img/earth-large.png) center;
+			}
+			.nav li:nth-child(4){
+				background: url(img/rocket-large.png) center;
+			}
+			.nav li:nth-child(5){
+				background: url(img/sport-large.png) center;
+			}
+			.nav li:nth-child(6){
+				background: url(img/wine-large.png) center;
+			}
+			.orange{
+				height: 205px;
+				width: 150px;
+				background-color: orange;
+				position: absolute;
+				border-radius:15px ;
+				top:-35px;
+				left: 0px;
+				z-index: -1;
+				transition-duration: 1s;
+			}
+			li:nth-child(2):hover~.orange{
+				left: 150px;
+			}
+			li:nth-child(3):hover~.orange{
+				left: 300px;
+			}
+			li:nth-child(4):hover~.orange{
+				left: 450px;
+			}
+			li:nth-child(5):hover~.orange{
+				left: 600px;
+			}
+			li:nth-child(6):hover~.orange{
+				left: 750px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--300*135-->
+		<ul class="nav clear">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<div class="orange"></div>
+		</ul>
+	</body>
+</html>
