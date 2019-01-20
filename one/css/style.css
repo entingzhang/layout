@@ -1,35 +1,240 @@
-.clear:after{
-	content: "";
-	height: 0;
-	display: block;
-	visibility: hidden;
-	clear: both;
-}
-body{
-	line-height: 1;
-}
-ul,ol{
-	list-style: none;
-}
-body{
-	background:#E4E4E4 url(../img/bg.png);
-	color:#292929;
-	color: rgba(0,0,0,0.82);
-	font: normal 100% Cambria,Georgia,serif;
-	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	-webkit-text-size-adjust: none;
-}
-a{
-	color: #890101;
-	text-decoration: none;
-}
-a:hover{
-	color: #df3030;
-}
-#page{
-	background: url(../img/rag.png) repeat-x;
-	padding: 2em 0;
-}
-
+.clear:after {
+				content: "";
+				height: 0;
+				display: block;
+				visibility: hidden;
+				clear: both;
+			}
+			
+			body {
+				line-height: 1;
+			}
+			
+			ul,
+			ol {
+				list-style: none;
+			}
+			
+			body {
+				background: #E4E4E4 url(../img/bg.png);
+				color: #292929;
+				color: rgba(0, 0, 0, 0.82);
+				font: normal 100% Cambria, Georgia, serif;
+				-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+				-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+				text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+				-webkit-text-size-adjust: none;
+			}
+			
+			a {
+				color: #890101;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #df3030;
+			}
+			
+			#page {
+				background: url(../img/rag.png) repeat-x;
+				padding: 2em 0;
+			}
+			
+			.inner {
+				margin: 0 auto;
+				width: 93.75%;
+			}
+			
+			img {
+				max-width: 100%;
+			}
+			
+			.mast {
+				width: 100%;
+			}
+			
+			.logo{
+				width: 31.875%;
+				float: left;
+				background: url(../img/logo-bg.png) no-repeat 50% 0;
+			}
+			.logo a {
+				padding-top: 117px;
+				height: 162px;
+				display: block;
+				text-align: center;
+			}
+			
+			ul.nav {
+				width: 64.379%;
+				float: right;
+				border-top: 1px solid #888583;
+				margin: 2em auto 0;
+			}
+			
+			ul.nav li {
+				float: left;
+				width: 33.333%;
+			}
+			
+			ul.nav a {
+				display: block;
+				background: url(../img/ornament.png) no-repeat 0 100%;
+				font: bold 14px/1.2 "Book Antiqua", "Palatino Linotype", Georgia, serif;
+				text-align: center;
+				letter-spacing: 0.1em;
+				padding: 1em 0.5em 3em;
+				margin-bottom: -1em;
+				text-transform: uppercase;
+			}
+			
+			ul.nav a:hover {
+				background-position: 50% 100%;
+			}
+			
+			ul.nav i {
+				display: block;
+				font: normal 10px Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+				letter-spacing: 0.05em;
+			}
+			
+			.intro,
+			.main,
+			.footer {
+				float: right;
+				width: 65.9375%;
+			}
+			
+			.intro {
+				margin-top: 10px;
+			}
+			
+			.intro h2 {
+				font: normal 2em "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+				text-align: center;
+				margin-bottom: 0.25em;
+			}
+			
+			.main {
+				margin-top: 10px;
+			}
+			
+			.main h2 {
+				background: url(../img/ornament.png) no-repeat 0 50%;
+				font-size: 1.4em;
+				margin: 0.75em 0 1em;
+				text-align: center;
+				text-transform: lowercase;
+			}
+			
+			.main h2 b {
+				padding: 0 1em;
+				background: url(../img/bg.png);
+				font-weight: normal;
+			}
+			
+			.figure {
+				float: left;
+				width: 14%;
+				font-size: 10px;
+				letter-spacing: 0.05em;
+				line-height: 1.1;
+				text-align: center;
+				margin: 0 3.2% 1.5em 0;
+				text-transform: uppercase;
+			}
+			
+			.figure b {
+				font-size: 14px;
+				display: block;
+				letter-spacing: 0.1em;
+				font-family: "Book Antiqua", "Palatino Linotype", Georgia, serif;
+			}
+			
+			.figure img {
+				display: block;
+				border-radius: 4px;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				margin: 0 auto 1em;
+			}
+			
+			li#f-winter {
+				margin-right: 0px;
+			}
+			
+			.footer {
+				background: url(../img/ornament.png) 50% 0 repeat-x;
+				font-size: 12px;
+				text-align: center;
+				padding: 40px 0px 20px;
+			}
+			
+			.footer p {
+				margin-bottom: 0.5em;
+			}
+			@media only screen and (max-width: 1024px) {
+				.mast{
+					float: left;
+					width: 31.875%;
+				}
+				.logo{
+					width: 100%;
+				}
+				ul.nav{
+					width: 100%;
+				}
+				ul.nav li{
+					width: 100%;
+				}
+				li.frist a{
+					border-top: 1px solid #FFF9EF;
+					padding-top:1.25em ;
+				}
+				.intro{
+					margin-top: 117px;
+				}
+				.figure {
+					width: 30%;
+					margin: 0 5% 1.5em 0;
+				}
+				li#f-mycroft{
+					margin-right: 0px;
+				}
+			}
+			@media only screen and (max-width: 960px) {
+				.mast{
+					position: relative;
+					width: 100%;
+				}
+				.logo{
+					background-image: none;
+				}
+				.logo a{
+					height: auto;
+				}
+				ul.nav{
+					position: absolute;
+					top: 0px;
+					width: 100%;
+				}
+				ul.nav li {
+				float: left;
+				width: 33.333%;
+				}
+				li.frist a{
+					border-top-width: 0px;
+					padding-top:1em ;
+				}
+				.intro{
+					margin-top: 0px;
+				}
+				.intro,
+				.main,
+				.footer {
+					width: 100%;
+				}
+			}
