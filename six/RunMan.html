@@ -13,14 +13,103 @@
 			.wrap ul{
 				margin: 0px;
 				padding: 0px;
+				width: 400px;
+				margin: 20px auto;
 				list-style: none;
 				position: relative;
-				margin: 10px auto;
 				background-color: red;
 			}
 			.wrap ul li{
+				position: absolute;
+			}
+			.wrap ul li img{
+				display: block;
 				margin: 0 auto;
 			}
+			/*-----------右边--------------*/	
+			li.torso{
+				top: 0;
+				left: 40%;
+				z-index: 100;
+				-webkit-transform:torso 1759ms linear infinite;
+			}
+			@-webkit-keyframes torso{
+				0% { -webkit-transform:   rotate(5deg) translate( 5px,   0px); }
+				25% { -webkit-transform:  rotate(5deg) translate(-5px, -14px); }
+				50% { -webkit-transform:  rotate(5deg) translate( 5px,   0px); }
+				75% { -webkit-transform:  rotate(5deg) translate(-5px, -14px); }
+				100% { -webkit-transform: rotate(5deg) translate( 5px,   0px); }
+			}
+			/*-----------右边--------------*/	
+			/*右边手臂上*/
+			li.right-bicep{
+				top: 90px;
+				left: 42%;
+				z-index: 1000;
+			}
+			/*右边手臂下*/
+			li.right-forearm{
+				top: 200px;
+				left: 45%;
+				z-index: 1000;
+			}
+			/*右边腿部上*/
+			li.right-thigh{
+				top: 240px;
+				left: 42%;
+			}
+			/*右边腿部下*/
+			li.shinr{
+				top: 360px;
+				left: 42%;
+			}
+			/*右边脚后跟*/
+			li.footr{
+				top: 515px;
+				left: 42%;
+			}	
+			/*右边脚尖*/
+			li.toesr{
+				top: 524px;
+				left: 58%;
+			}	
+			/*-----------左边--------------*/		
+			/*左边手臂上*/
+			li.left-bicep{
+				top: 90px;
+				left: 42%;
+			}
+			/*左边手臂下*/
+			li.left-forearm{
+				top: 200px;
+				left: 45%;
+			}
+			/*左边腿部上*/
+			li.left-thigh{
+				top: 240px;
+				left: 42%;
+				
+			}
+			/*左边腿部下*/
+			li.shinl{
+				top: 360px;
+				left: 42%
+			}
+			/*左边脚后跟*/
+			li.footl{
+				top: 515px;
+				left: 42%;
+			}	
+			/*左边脚尖*/
+			li.toesl{
+				top: 524px;
+				left: 58%;
+			}	
+			/*-----------阴影--------------*/		
+			li.shadow{
+				top: 520px;
+				left: 30%;
+			}	
 		</style>
 	</head>
 	<body>
@@ -29,12 +118,17 @@
 				<li class="torso"><img src="img/torso.png"/></li>
 				<li class="left-bicep"><img src="img/left-bicep.png"/></li>
 				<li class="left-forearm"><img src="img/left-forearm.png"/></li>
-				<li class="left-thigh"><img src="img/left-thigh.png"/></li>
 				<li class="right-bicep"><img src="img/right-bicep.png"/></li>
 				<li class="right-forearm"><img src="img/right-forearm.png"/></li>
+				<li class="left-thigh"><img src="img/left-thigh.png"/></li>
 				<li class="right-thigh"><img src="img/right-thigh.png"/></li>
-				<li class="shin"><img src="img/shin.png"/></li>
-				<li class="foot"><img src="img/foot.png"/></li>
+				<li class="shinl"><img src="img/shin.png"/></li>
+				<li class="shinr"><img src="img/shin.png"/></li>
+				<li class="footl"><img src="img/foot.png"/></li>
+				<li class="footr"><img src="img/foot.png"/></li>
+				<li class="toesl"><img src="img/toes.png"/></li>
+				<li class="toesr"><img src="img/toes.png"/></li>
+				<li class="shadow"><img src="img/shadow.png"/></li>
 			</ul>
 		</div>
 	</body>
