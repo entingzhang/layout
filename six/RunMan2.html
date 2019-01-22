@@ -31,7 +31,7 @@
 				top: 0;
 				left: 40%;
 				z-index: 100;
-				-webkit-transform:torso 1759ms linear infinite;
+				-webkit-animation:torso 1759ms linear infinite;
 			}
 			@-webkit-keyframes torso{
 				0% { -webkit-transform:   rotate(5deg) translate( 5px,   0px); }
@@ -43,20 +43,46 @@
 			/*-----------右边--------------*/	
 			/*右边手臂上*/
 			li.right-bicep{
-				top: 90px;
+				top: 85px;
 				left: 42%;
 				z-index: 1000;
+				-webkit-animation: right-bicep 1759ms linear infinite;
+				-webkit-transform-origin: 30px 20px;
+			}
+			@-webkit-keyframes right-bicep{
+				0%{
+					-webkit-transform: rotate(-20deg);
+				}
+				50%{
+					-webkit-transform: rotate(26deg);
+				}
+				100%{
+					-webkit-transform: rotate(-20deg);
+				}
 			}
 			/*右边手臂下*/
 			li.right-forearm{
-				top: 200px;
-				left: 45%;
+				top: 190px;
+				left: 40%;
 				z-index: 1000;
+				-webkit-animation: right-forearm 1759ms linear infinite;
+				-webkit-transform-origin: 20px 10px;
+			}
+			@-webkit-keyframes right-forearm{
+				0%{
+					-webkit-transform: rotate(-10deg);
+				}
+				50%{
+					-webkit-transform: rotate(-45deg);
+				}
+				100%{
+					-webkit-transform: rotate(-10deg);
+				}
 			}
 			/*右边腿部上*/
 			li.right-thigh{
 				top: 240px;
-				left: 42%;
+				left: 40%;
 			}
 			/*右边腿部下*/
 			li.shinr{
@@ -87,7 +113,7 @@
 			/*左边腿部上*/
 			li.left-thigh{
 				top: 240px;
-				left: 42%;
+				left: 40%;
 				
 			}
 			/*左边腿部下*/
