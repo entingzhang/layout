@@ -50,12 +50,18 @@
 				border: 0px;
 				font-size: 0.2rem;
 			}
+			#user-name .fa-times{
+				display: none;
+			}
 			#user-password input{
 				width: 4.5rem;
 				height: 0.8rem;
 				outline: 0;
 				border: 0px;
 				font-size: 0.2rem;
+			}
+			#user-password .fa-times{
+				display: none;
 			}
 			#user-password i{
 				width: 0.4rem;
@@ -82,6 +88,7 @@
 				height: 0.8rem;
 				background-color: #FFBEB4;
 				border-radius: 0.4rem;
+				outline: 0;
 				border: 0;
 				font-size: 0.32rem;
 			}
@@ -193,6 +200,26 @@
 				登录即代表您已同意<a href="#">京东隐私政策</a>
 			</div>
 		</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".login #user-name input").focus(function(){
+				$(".login #user-name .fa-times").css('display','block');
+			})
+			$(".login #user-name input").blur(function(){
+				$(".login #user-name .fa-times").css('display','none');
+			})
+			$(".login #user-password input").focus(function(){
+				$(".login #user-password .fa-times").css('display','block');
+			})
+			$(".login #user-password input").blur(function(){
+				$(".login #user-password .fa-times").css('display','none');
+			})
+			
+//			if ($(".login #user-name input").value!="null"&& $(".login #user-password input").value!="null") {
+//				$(".login-button input").css('backgroundColor','#FF2A05');
+//			}
+			
+		</script>
 	</body>
 
 </html>
