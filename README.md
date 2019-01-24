@@ -15,4 +15,4 @@
 ##
 第五天：https://entingzhang.github.io/layout/five/Nav.html
 ##
-第六天：https://entingzhang.github.io/layout/six/RunMan2.html
+第六天：https://entingzhang.github.io/layout/six/RunMan.html

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.man>div {
+				height: inherit;
+				width: inherit;
+			}
+			
+			.man {
+				width: 86px;
+				height: 274px;
+				position: relative;
+				margin: 50px auto 0px;
+				-webkit-animation: body 2s linear infinite;
+			}
+			
+			@-webkit-keyframes body {
+				0% {
+					-webkit-transform: rotate(5deg) translate( 5px, 0px);
+				}
+				25% {
+					-webkit-transform: rotate(5deg) translate(-5px, -14px);
+				}
+				50% {
+					-webkit-transform: rotate(5deg) translate( 5px, 0px);
+				}
+				75% {
+					-webkit-transform: rotate(5deg) translate(-5px, -14px);
+				}
+				100% {
+					-webkit-transform: rotate(5deg) translate( 5px, 0px);
+				}
+			}
+			/*----------- 身体运动-------------*/
+			.right-bicep{
+				width: 51px;
+				height: 24px;
+				position: absolute;
+				top:100px ;
+				left: 4px;
+				-webkit-transform-origin: 18px 15px;
+				-webkit-animation: right-bicep 2s linear infinite;
+			}
+			@-webkit-keyframes right-bicep{
+				0% {
+					-webkit-transform: rotate(-20deg);
+				}
+				50% {
+					-webkit-transform: rotate(26deg);
+				}
+				100% {
+					-webkit-transform: rotate(-20deg);
+				}
+			}
+			.right-forearm{
+				width: 36px;
+				height: 121px;
+				position: absolute;
+				top: 103px;
+				left: 16px;
+				-webkit-transform-origin: 18px 15px;
+				-webkit-animation: right-forearm 2s linear infinite;
+			}
+			@-webkit-keyframes right-forearm{
+				0% {
+					-webkit-transform: rotate(-45deg);
+				}
+				50% {
+					-webkit-transform: rotate(-10deg);
+				}
+				100% {
+					-webkit-transform: rotate(-45deg);
+				}
+			}
+			/*----------- 右手运动-------------*/
+			.left-bicep{
+				width: 51px;
+				height: 24px;
+				position: absolute;
+				top:100px ;
+				left: 4px;
+				z-index: -99;
+				-webkit-transform-origin: 18px 15px;
+				-webkit-animation: left-bicep 2s linear infinite;
+			}
+			@-webkit-keyframes left-bicep{
+				0% {
+					-webkit-transform: rotate(26deg);
+				}
+				50% {
+					-webkit-transform: rotate(-20deg);
+				}
+				100% {
+					-webkit-transform: rotate(26deg);
+				}
+			}
+			.left-forearm{
+				width: 36px;
+				height: 121px;
+				position: absolute;
+				top: 103px;
+				left: 16px;
+				-webkit-transform-origin: 18px 15px;
+				-webkit-animation: left-forearm 2s linear infinite;
+			}
+			@-webkit-keyframes left-forearm{
+				0% {
+					-webkit-transform: rotate(-10deg);
+				}
+				50% {
+					-webkit-transform: rotate(-45deg);
+				}
+				100% {
+					-webkit-transform: rotate(-10deg);
+				}
+			}
+			/*----------- 左手运动-------------*/
+			.right-thigh{
+				width: 69px;
+				height: 144px;
+				position: absolute;
+				top: 242px;
+				left: 0px;
+				z-index: -50;
+				-webkit-transform-origin: 33px 7px;
+				-webkit-animation: right-thigh 2s linear infinite;
+			}
+			@-webkit-keyframes right-thigh{
+				0% {
+					-webkit-transform: rotate(-45deg);
+				}
+				50% {
+					-webkit-transform: rotate(-10deg);
+				}
+				100% {
+					-webkit-transform: rotate(-45deg);
+				}
+			}
+			.right-shin{
+				width: 53px;
+				height: 173px;
+				position: absolute;
+				top: 114px;
+				left: 2px;
+				z-index: -51;
+				-webkit-transform-origin: 30px 18px;
+				-webkit-animation: right-shin 2s linear infinite;
+			}
+			@-webkit-keyframes right-shin{
+				0% {
+					-webkit-transform: rotate(30deg);
+				}
+				25% {
+					-webkit-transform: rotate(20deg);
+				}
+				50% {
+					-webkit-transform: rotate(20deg);
+				}
+				75% {
+					-webkit-transform: rotate(85deg);
+				}
+				100% {
+					-webkit-transform: rotate(30deg);
+				}
+			}
+			/*----------- 右腿运动-------------*/
+			.left-thigh{
+				width: 69px;
+				height: 144px;
+				position: absolute;
+				top: 242px;
+				left: 0px;
+				z-index: -50;
+				-webkit-transform-origin: 33px 7px;
+				-webkit-animation: left-thigh 2s linear infinite;
+			}
+			@-webkit-keyframes left-thigh{
+				0% {
+					-webkit-transform: rotate(-10deg);
+				}
+				50% {
+					-webkit-transform: rotate(-45deg);
+				}
+				100% {
+					-webkit-transform: rotate(-10deg);
+				}
+			}
+			.left-shin{
+				width: 53px;
+				height: 173px;
+				position: absolute;
+				top: 114px;
+				left: 2px;
+				z-index: -51;
+				-webkit-transform-origin: 30px 18px;
+				-webkit-animation: left-shin 2s linear infinite;
+			}
+			@-webkit-keyframes left-shin{
+				0% {
+					-webkit-transform: rotate(20deg);
+				}
+				25% {
+					-webkit-transform: rotate(85deg);
+				}
+				50% {
+					-webkit-transform: rotate(30deg);
+				}
+				75% {
+					-webkit-transform: rotate(20deg);
+				}
+				100% {
+					-webkit-transform: rotate(20deg);
+				}	
+			}
+			/*----------- 左腿运动-------------*/
+			
+			.right-foot{
+				width: 67px;
+				height: 34px;
+				position: absolute;
+				top: 140px;
+				left: 2px;
+				-webkit-transform-origin: 22px 23px ;
+				-webkit-animation: right-foot 2s linear infinite;
+			}
+			@-webkit-keyframes right-foot{
+				0% {
+					-webkit-transform: rotate(-5deg);
+				}
+				25% {
+					-webkit-transform: rotate(-7deg);
+				}
+				50% {
+					-webkit-transform: rotate(-16deg);
+				}
+				75% {
+					-webkit-transform: rotate(-10deg);
+				}
+				100% {
+					-webkit-transform: rotate(-5deg);
+				}
+			}
+			.right-toes{
+				width: 28px;
+				height: 25px;
+				position: absolute;
+				top: 9px;
+				left: 60px;
+				-webkit-transform-origin: 2px 13px;
+				-webkit-animation: right-toes 2s linear infinite;
+			}
+			@-webkit-keyframes right-toes{
+				0% {
+					-webkit-transform: rotate(0deg);
+				}
+				25% {
+					-webkit-transform: rotate(-10deg);
+				}
+				50% {
+					-webkit-transform: rotate(-10deg);
+				}
+				75% {
+					-webkit-transform: rotate(-25deg);
+				}
+				100% {
+					-webkit-transform: rotate(0deg);
+				}
+			}
+			/*----------- 右脚运动-------------*/
+			.left-foot{
+				width: 67px;
+				height: 34px;
+				position: absolute;
+				top: 140px;
+				left: 2px;
+				-webkit-transform-origin: 22px 23px ;
+				-webkit-animation: left-foot 2s linear infinite;
+			}
+			@-webkit-keyframes left-foot{
+				0% {
+					-webkit-transform: rotate(-5deg);
+				}
+				25% {
+					-webkit-transform: rotate(-7deg);
+				}
+				50% {
+					-webkit-transform: rotate(-16deg);
+				}
+				75% {
+					-webkit-transform: rotate(-10deg);
+				}
+				100% {
+					-webkit-transform: rotate(-5deg);
+				}
+			}
+			.left-toes{
+				width: 28px;
+				height: 25px;
+				position: absolute;
+				top: 9px;
+				left: 60px;
+				-webkit-transform-origin: 2px 13px;
+				-webkit-animation: left-toes 2s linear infinite;
+			}
+			@-webkit-keyframes left-toes{
+				0% {
+					-webkit-transform: rotate(0deg);
+				}
+				25% {
+					-webkit-transform: rotate(-10deg);
+				}
+				50% {
+					-webkit-transform: rotate(-10deg);
+				}
+				75% {
+					-webkit-transform: rotate(-25deg);
+				}
+				100% {
+					-webkit-transform: rotate(0deg);
+				}
+			}
+			/*----------- 左脚运动-------------*/
+			.shadow{
+				position: absolute;
+				top: 490px;
+				-webkit-animation: shadow 2s linear infinite;
+			}
+			@-webkit-keyframes shadow {
+				0% {
+					opacity: 1;
+				}
+				25% {
+					opacity: 0.75;
+				}
+				50% {
+					opacity: 1;
+				}
+				75% {
+					opacity: 0.75;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="man">
+			<div class="right-bicep">
+				<img src="img/right-bicep.png"/>
+				<div class="right-forearm">
+					<img src="img/right-forearm.png"/>
+				</div>
+			</div>
+			
+			<img src="img/torso.png" />
+			
+			<div class="left-bicep">
+				<img src="img/left-bicep.png"/>
+				<div class="left-forearm">
+					<img src="img/left-forearm.png"/>
+				</div>
+			</div>
+			
+			<div class="right-thigh">
+				<img src="img/right-thigh.png"/>
+				<div class="right-shin">
+					<img src="img/shin.png"/>
+					<div class="right-foot">
+						<img src="img/foot.png"/>
+						<div class="right-toes">
+							<img src="img/toes.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="left-thigh">
+				<img src="img/left-thigh.png"/>
+				<div class="left-shin">
+					<img src="img/shin.png"/>
+					<div class="left-foot">
+						<img src="img/foot.png"/>
+						<div class="left-toes">
+							<img src="img/toes.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="shadow">
+				<img src="img/shadow.png"/>
+			</div>
+		</div>
+	</body>
+
+</html>
