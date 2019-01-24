@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
 		<title></title>
 		<style type="text/css">
 			html {
@@ -16,12 +17,56 @@
 				font-family: "宋体";
 				font-weight: bold;
 			}
-			
+			.login-top{
+				width: 6.5rem;
+				height: 0.44rem;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				padding:0rem 0.5rem;
+				color: #222222;
+			}
+			.login-top i{
+				margin-right: 2.525rem;
+			}
+			.wrap{
+				max-width: 7.5rem;
+				margin: 0 auto;
+			}
+			.login-wrap-active{
+				display: block;
+			}
+			.input-content{
+				height: .5rem;
+			    padding-top: .1rem;
+			    padding-bottom: .1rem;
+			    position: relative;
+			    overflow: hidden;
+			    margin-top: .2rem;
+			    background: #fff;
+			    border-bottom: .01rem solid #efefef;
+			    box-sizing: border-box;
+			}
+			input{
+				font-size: 0.16rem;
+				outline: 0;
+			}
 		</style>
 	</head>
 
 	<body>
-		
+		<div class="login-top">
+			<i class="fa fa-chevron-left "></i>
+			<b>京东登录</b>
+		</div>
+		<div class="login wrap">
+			<div id="user-name" class="login-wrap login-wrap-active">
+				<div class="input-content">
+					<input type="text" name="" id="user-name" value placeholder="用户名/邮箱/已验证手机"/>
+					<i class="fa fa-times"></i>
+				</div>
+			</div>
+		</div>
 	</body>
 
 </html>
