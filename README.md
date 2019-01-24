@@ -17,6 +17,6 @@
 ##
 第六天：https://entingzhang.github.io/layout/six/RunMan.html
 ##
-第七天：https://entingzhang.github.io/layout/six/JD.html
+第七天：https://entingzhang.github.io/layout/seven/JD.html
 ##
-第七天：https://entingzhang.github.io/layout/six/JD-Login.html
+第七天：https://entingzhang.github.io/layout/seven/JD-Login.html
