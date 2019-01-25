@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 		<title></title>
 		<style type="text/css">
 			html {
@@ -17,7 +17,8 @@
 				font-family: "宋体";
 				font-weight: bold;
 			}
-			.login-top{
+			
+			.login-top {
 				width: 6.5rem;
 				height: 0.44rem;
 				display: flex;
@@ -26,49 +27,59 @@
 				margin: 0rem 0.5rem 0.1rem;
 				color: #222222;
 			}
-			.login-top i{
+			
+			.login-top i {
 				margin-right: 2.525rem;
 			}
-			.login{
+			
+			.login {
 				width: 6.5rem;
 				height: 2.1rem;
 				margin: 0rem 0.5rem 0.1rem;
 				color: #999999;
 			}
-			.login #user-name,.login #user-password{
+			
+			.login #user-name,
+			.login #user-password {
 				width: 100%;
 				height: 1rem;
-				border-bottom:1px solid #EFEFEF;
+				border-bottom: 1px solid #EFEFEF;
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
 			}
-			#user-name input{
+			
+			#user-name input {
 				width: 6.1rem;
 				height: 0.8rem;
 				outline: 0;
 				border: 0px;
 				font-size: 0.2rem;
 			}
-			#user-name .fa-times{
+			
+			#user-name .fa-times {
 				display: none;
 			}
-			#user-password input{
+			
+			#user-password input {
 				width: 4.5rem;
 				height: 0.8rem;
 				outline: 0;
 				border: 0px;
 				font-size: 0.2rem;
 			}
-			#user-password .fa-times{
+			
+			#user-password .fa-times {
 				display: none;
 			}
-			#user-password i{
+			
+			#user-password i {
 				width: 0.4rem;
 				height: 0.8rem;
 				line-height: 0.8rem;
 			}
-			#user-password span{
+			
+			#user-password span {
 				display: block;
 				width: 1rem;
 				height: 0.8rem;
@@ -77,13 +88,15 @@
 				border-left: 2px solid #EFEFEF;
 				padding-left: 0.2rem;
 			}
-			.login-button{
+			
+			.login-button {
 				width: 6.5rem;
 				height: 0.8rem;
 				margin: 0rem 0.5rem 0.1rem;
 				color: #ffffff;
 			}
-			.login-button input{
+			
+			.login-button input {
 				width: 100%;
 				height: 0.8rem;
 				background-color: #FFBEB4;
@@ -92,7 +105,12 @@
 				border: 0;
 				font-size: 0.32rem;
 			}
-			.other-login{
+			
+			.change {
+				background-color: #FF2A05;
+			}
+			
+			.other-login {
 				width: 6.5rem;
 				height: 0.8rem;
 				margin: 0rem 0.5rem 0.1rem;
@@ -101,7 +119,8 @@
 				display: flex;
 				justify-content: space-between;
 			}
-			.login-qq{
+			
+			.login-qq {
 				width: 6.5rem;
 				height: 3rem;
 				margin: 0rem 0.5rem 0.1rem;
@@ -111,49 +130,57 @@
 				flex-direction: column;
 				align-items: center;
 			}
-			.login-qq>div{
+			
+			.login-qq>div {
 				width: 100%;
 				height: 0.5rem;
 			}
-			.login-qq .list1{
+			
+			.login-qq .list1 {
 				display: flex;
 				justify-content: space-between;
 				line-height: 0.01rem;
 			}
-			.login-qq .list1 span{
+			
+			.login-qq .list1 span {
 				display: block;
 				width: 2.5rem;
 				height: 0.01rem;
 				background-color: #EFEFEF;
 			}
-			.login-qq .list2{
+			
+			.login-qq .list2 {
 				margin-top: 0.1rem;
 			}
-			.login-qq .list2 p{
+			
+			.login-qq .list2 p {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				font-family: "微软雅黑";
 				margin-top: 0.1rem;
 			}
-			.login-qq .list2 p:first-child{
+			
+			.login-qq .list2 p:first-child {
 				width: 0.6rem;
 				height: 0.6rem;
 				border-radius: 50%;
 				background-color: #E7F7FE;
 				font-size: 0.32rem;
 				color: #E7F7FE;
-				-webkit-text-stroke-color: #12B7F5 ;
+				-webkit-text-stroke-color: #12B7F5;
 				-webkit-text-stroke-width: 0.03rem;
 				margin-left: 3rem;
 			}
-			.login-qq .list3{
+			
+			.login-qq .list3 {
 				align-self: flex-end;
 				margin-top: 1.5rem;
 				display: flex;
 				justify-content: center;
 			}
-			.login-qq .list3 a{
+			
+			.login-qq .list3 a {
 				text-decoration: none;
 				color: #409EFF;
 			}
@@ -167,20 +194,20 @@
 		</div>
 		<div class="login">
 			<div id="user-name">
-				<input type="text" name="" class="user-name" value placeholder="用户名/邮箱/已验证手机"/>
+				<input type="text" name="" class="name" value placeholder="用户名/邮箱/已验证手机" />
 				<i class="fa fa-times"></i>
 			</div>
 			<div id="user-password">
-				<input type="password" name="" class="user-name" value placeholder="请输入密码"/>
+				<input type="password" name="" class="password" value placeholder="请输入密码" />
 				<i class="fa fa-times"></i>
-				<i class="fa fa-eye-slash"></i>
+				<i class="fa fa-eye-slash eye"></i>
 				<span class="txt">
 					忘记密码
 				</span>
 			</div>
 		</div>
 		<div class="login-button">
-			<input type="button" value="登录" />
+			<input type="button" value="登录" class="disabled" />
 		</div>
 		<div class="other-login">
 			<span class="message">短信验证登录</span>
@@ -188,8 +215,7 @@
 		</div>
 		<div class="login-qq">
 			<div class="list1">
-				<span></span>
-				其他登录方式
+				<span></span> 其他登录方式
 				<span></span>
 			</div>
 			<div class="list2">
@@ -197,28 +223,43 @@
 				<p>QQ</p>
 			</div>
 			<div class="list3">
-				登录即代表您已同意<a href="#">京东隐私政策</a>
+				登录即代表您已同意
+				<a href="#">京东隐私政策</a>
 			</div>
 		</div>
 		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$(".login #user-name input").focus(function(){
-				$(".login #user-name .fa-times").css('display','block');
+			$(".login #user-name input").focus(function() {
+				$(".login #user-name .fa-times").css('display', 'block');
 			})
-			$(".login #user-name input").blur(function(){
-				$(".login #user-name .fa-times").css('display','none');
+			$(".login #user-name input").blur(function() {
+				$(".login #user-name .fa-times").css('display', 'none');
 			})
-			$(".login #user-password input").focus(function(){
-				$(".login #user-password .fa-times").css('display','block');
+			$(".login #user-password input").focus(function() {
+				$(".login #user-password .fa-times").css('display', 'block');
 			})
-			$(".login #user-password input").blur(function(){
-				$(".login #user-password .fa-times").css('display','none');
+			$(".login #user-password input").blur(function() {
+				$(".login #user-password .fa-times").css('display', 'none');
 			})
-			
-//			if ($(".login #user-name input").value!="null"&& $(".login #user-password input").value!="null") {
-//				$(".login-button input").css('backgroundColor','#FF2A05');
-//			}
-			
+
+			$("#user-password .fa-eye-slash").on('click', function() {
+				//$("#user-password .password").attr("type", "text");
+				
+				$(this).toggleClass('fa fa-eye');
+				console.log("text");
+			}).on('click', function() {
+				$(this).toggleClass('fa fa-eye-slash');
+				//$("#user-password .password").attr("type", "password");
+				console.log("password");
+			})
+
+			$(".login input").on('input', function() {
+				if($("#user-name input").val().length == 0 || $("#user-password input").val().length == 0) {
+					$(".login-button input").css('backgroundColor', '#FFBEB4');
+				} else {
+					$(".login-button input").css('backgroundColor', '#FF2A05');
+				}
+			})
 		</script>
 	</body>
 
