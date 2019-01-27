@@ -20,3 +20,5 @@
 第七天：https://entingzhang.github.io/layout/seven/JD.html
 ##
 第七天：https://entingzhang.github.io/layout/seven/JD-Login.html
+##
+第七天：https://entingzhang.github.io/layout/eight/course.html

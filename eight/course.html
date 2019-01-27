@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<title></title>
+		<style type="text/css">
+			main {
+				position: relative;
+			}
+			/*------------顶部banner------------*/
+			
+			.cend-intro-header {
+				position: relative;
+				padding-bottom: 62.5%;
+				background-color: red;
+			}
+			/*------------顶部悬浮按钮------------*/
+			
+			.cend-intro-header .cend-intro-share-btn {
+				height: 14px;
+				width: 90px;
+				font-size: 14px;
+				position: absolute;
+				top: 5px;
+				right: 0px;
+				position: fixed;
+				z-index: 999;
+				color: #fff;
+				background-color: rgba(247, 54, 87, .7);
+				box-shadow: 0 0 10px 0 rgba(251, 64, 96, .52);
+				padding: 10px 8px;
+				-webkit-border-radius: 20px 0 0 20px;
+				border-radius: 20px 0 0 20px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			
+			.cend-intro-header .banner {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				display: block;
+			}
+			/*------------标题价格------------*/
+			
+			.specials-count-down {
+				background: url(img/price-bg.png) 100% no-repeat;
+				background-size: cover;
+				height: 120px;
+				padding: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				color: #f63657;
+			}
+			
+			.specials-count-down .sale {
+				margin-right: 2%;
+				font-weight: 700;
+				font-size: 32px;
+			}
+			
+			.specials-count-down .sale i {
+				font-size: 12px;
+			}
+			
+			.specials-count-down .price-box {
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				margin-right: 50%;
+				white-space: nowrap;
+				font-style: italic;
+			}
+			
+			.specials-count-down .price-box .price {
+				text-decoration: line-through;
+			}
+			
+			.specials-count-down .price-box .title {
+				font-weight: 500;
+				border: 1px solid #f63657;
+				display: inline-flex;
+				align-items: center;
+				border-radius: 8px;
+				padding: 0px 5px;
+			}
+			
+			.specials-count-down .right {
+				text-align: right;
+				font-size: 32px;
+				white-space: nowrap;
+				font-weight: 700;
+			}
+			/*------------顶部标题------------*/
+			
+			.intro-title {
+				padding: 20px;
+				border-bottom: 10px solid #F7F7F7;
+			}
+			
+			.intro-title p {
+				color: #333;
+				font-size: 18px;
+				line-height: 25px;
+				font-weight: 700;
+				text-overflow: ellipsis;
+				margin-bottom: 12px;
+			}
+			
+			.intro-title .detail-course-box {
+				display: flex;
+			}
+			
+			.intro-title .detail-course-box>div {
+				font-size: 11px;
+				color: #999;
+				line-height: 1.4;
+				margin-right: 30px;
+			}
+			
+			.intro-title .detail-course-box>div:hover {
+				color: #f73657;
+				box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+				transform: scale(1.3);
+			}
+			
+			.intro-title .detail-course-box span {
+				font-size: 14px;
+			}
+			/*------------中间tab按钮------------*/
+			
+			.p-intro-tab {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				height: 60px;
+				background-color: #fff;
+				border-bottom: 1px solid #e6e6e6;
+				font-size: 14px;
+			}
+			
+			.p-intro-tab .tab-item {
+				flex: 1;
+				color: #666;
+				text-align: center;
+				height: 100%;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			.p-intro-tab .tab-item.active {
+				color: #333;
+				font-weight: bold;
+			}
+			
+			.p-intro-tab .tab-item.active:after {
+				content: "";
+				display: block;
+				height: 6px;
+				border-radius: 3px;
+				background-color: #f73657;
+				width: 40px;
+				position: absolute;
+				bottom: 2px;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			
+			.main-info {}
+			
+			.main-info .kecheng h3 {
+				margin-top: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-weight: 700;
+			}
+			
+			.main-info .kecheng h5 {
+				text-align: center;
+				line-height: 20px;
+			}
+			
+			.main-info .kecheng h5 span {
+				color: #f73657;
+			}
+			
+			.main-info .kecheng .process-container {
+				margin: 20px auto 0;
+				display: flex;
+				width: 80%;
+				align-items: center;
+				justify-content: space-around;
+				font-size: 50px;
+				color: #f73657;
+				text-align: center;
+			}
+			
+			.main-info .kecheng .process-container span:nth-child(2n) {
+				font-size: 30px;
+				color: #FF859C;
+			}
+			
+			.main-info .kecheng .process-container span>p {
+				margin-top: 10px;
+				font-size: 16px;
+				color: #333;
+			}
+			/*------------簡介部分------------*/
+			
+			.channel-intro-container {
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.p-intro-section {
+				position: relative;
+				background-color: #fff;
+			}
+			
+			.p-intro-section-title {
+				padding: 10% 10% 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.p-intro-section-title p {
+				font-size: 16px;
+				line-height: 25px;
+				font-weight: 700;
+			}
+			
+			.p-intro-section-title .intro_dom {
+				font-size: 12px;
+				height: 30px;
+				color: #fff;
+				background-image: linear-gradient(-90deg, #ff7d00, #ffa200);
+				display: flex;
+				border-radius: 8px;
+				line-height: 30px;
+				overflow: hidden;
+				background-clip: content-box;
+			}
+			/*------------侧边多功能按钮------------*/
+			
+			.operate-menu-entry {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				border-radius: 25px;
+				background-color: #fff;
+				bottom: 80px;
+				right: 10px;
+				color: #fff;
+				position: fixed;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			}
+			
+			.operate-menu-entry>span {
+				font-size: 30px;
+				color: #a2a2a2;
+			}
+			
+			.menu-info {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				height: 200px;
+				z-index: 10000;
+				display: none;
+			}
+			
+			.menu-info .info1 {
+				width: 100%;
+				height: 150px;
+				background-color: #EEEEEE;
+				border-radius: 30px 30px 0 0;
+			}
+			
+			.info1 {
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.info1 a {
+				color: #666;
+				display: block;
+			}
+			
+			.info1 span {
+				width: 40px;
+				height: 40px;
+				padding: 5px;
+				border-radius: 50%;
+				background-color: #fff;
+			}
+			
+			.info1 span.fa {
+				line-height: 40px;
+				font-size: 30px;
+			}
+			
+			.info1 p {
+				font-size: 12px;
+				line-height: 17px;
+				white-space: nowrap;
+				margin-top: 10px;
+			}
+			
+			.menu-info .info2 {
+				width: 100%;
+				height: 49px;
+				border-top: 1px solid #999;
+				background-color: #EEEEEE;
+				text-align: center;
+				line-height: 49px;
+			}
+			/*------------底部购买按钮------------*/
+			
+			.footer {
+				width: 100%;
+				height: 50px;
+				background-color: #fff;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				position: fixed;
+			}
+			
+			.footer>span {
+				height: 40px;
+				background-color: #f73657;
+				position: absolute;
+				bottom: 5px;
+				left: 20px;
+				right: 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #FFF;
+				position: fixed;
+				z-index: 999;
+				border-radius: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<main>
+			<div class="cend-intro-header">
+				<!--顶部悬浮按钮-->
+				<div class="cend-intro-share-btn">
+					<span class="fa fa-share-alt"></span>
+					<div class="text">邀请好友学</div>
+				</div>
+				<!--顶部banner-->
+				<img class="banner" src="img/banner-course1.jpg" />
+			</div>
+			<!--标题价格-->
+			<div class="specials-count-down">
+				<span class="sale"><i>￥</i>69</span>
+				<ul class="price-box">
+					<li><var class="price">￥99</var></li>
+					<li><var class="title">限时特价</var></li>
+				</ul>
+				<span class="right">限时特价</span>
+			</div>
+			<!--标题-->
+			<div class="intro-title">
+				<p>课1：减龄瑜伽入门：暖身和缓和</p>
+				<div class="detail-course-box">
+					<div class="icon-one">
+						<span class="fa fa-file-text-o"></span> 单课
+					</div>
+					<div class="icon-two">
+						<span class="fa fa-play-circle-o"></span> 2.6万次学习
+					</div>
+					<div class="icon-three">
+						<span class="fa fa-repeat"></span> 支持回听
+					</div>
+				</div>
+			</div>
+			<!--中间tab按钮-->
+			<div class="p-intro-tab">
+				<div class="tab-item active" data-log-name="课程介绍">课程介绍</div>
+				<div class="tab-item" data-log-name="听课列表">听课列表<span class="eval-num">(20)</span></div>
+				<div class="tab-item" data-log-name="用户评价">用户评价<span class="eval-num">(165)</span></div>
+			</div>
+			<!--tab切换的内容-->
+			<div class="main-info">
+				<div class="kecheng" style="height: 800px;background-color: #D9D9D9 display: block;">
+					<div class="back-tuition-label">
+						<h3 class="title">组队学习返学费</h3>
+						<h5 class="tip">报名后，邀请3位好友立返学费<span>(最高￥49)</span></h5>
+						<div class="process-container"><span class="sign icon"></span><span class="step"></span><span class="friends icon"></span><span class="step"></span><span class="money icon"></span></div>
+					</div>
+					<div class="process-container">
+						<span class="fa fa-file-text"><p>报名课程</p></span>
+						<span class="fa fa-arrow-circle-right "></span>
+						<span class="fa fa-users"><p>邀请好友</p></span>
+						<span class="fa fa-arrow-circle-right"></span>
+						<span class="fa fa-jpy"><p>学费返现</p></span>
+					</div>
+					<div class="channel-intro-container">
+						<div class="p-intro-section">
+							<div class="p-intro-section-title">
+								<p>简介</p>
+								<span class="intro_dom">
+									<div class="intro-page-coupon-btn><span class="tips receive">购买时自动抵扣</span><span class="price">￥20</span></div>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div style="height: 800px;background-color: green; display: none;"></div>
+			<div style="height: 800px;background-color: blue; display: none;"></div>-->
+			</div>
+			<!--侧边多功能按钮-->
+			<div class="operate-menu-entry"><span class="fa fa-th-large"></span></div>
+			<div class="menu-info">
+				<div class="info1 weui-flex">
+					<a href="#" class="nav-item weui-flex__item">
+						<span class="fa fa-home"></span>
+						<p>直播间</p>
+					</a>
+					<a href="#" class="nav-item weui-flex__item">
+						<span class="fa fa-question-circle "></span>
+						<p>咨询</p>
+					</a>
+					<a href="#" class="nav-item weui-flex__item">
+						<span class="fa fa-heart"></span>
+						<p>收藏</p>
+					</a>
+				</div>
+				<div class="info2">
+					关闭
+				</div>
+			</div>
+
+			<!--底部购买按钮-->
+			<footer class="footer">
+				<span class="btn-lg">
+					<p class="btn-buy">
+						<p>购买系列课
+							<s>￥</s>
+							<b style="font-weight: normal;">99</b>
+						</p>
+					</p>
+				</span>
+			</footer>
+		</main>
+		<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/weui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//tab按钮之间的切换
+			$(".tab-item").on('click', function() {
+				$(this).addClass('active').siblings('.active').removeClass('active');
+				var num = $(this).index();
+				//console.log(num);
+				$(".main-info div").eq(num).show().siblings("div").hide();
+			})
+			//侧边导航点击时间被触发时候更多内容之间的切换
+			$(".operate-menu-entry").on('click', function() {
+				$(".menu-info").css('display', 'block');
+			})
+			$(".menu-info .info2").on('click', function() {
+				$(".menu-info").css('display', 'none');
+			})
+		</script>
+	</body>
+
+</html>
